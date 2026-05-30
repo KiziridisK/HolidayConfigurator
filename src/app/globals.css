@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-dm-sans);
+  --color-cream: #fff8f3;
+  --color-blush: #fce4ec;
+  --color-rose: #e8a0b8;
+  --color-rose-deep: #c77d96;
+  --color-plum: #5c3d4a;
+  --color-sunset: #f4a261;
+  --color-mist: #f5ebe0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background: linear-gradient(
+    145deg,
+    #fff8f3 0%,
+    #fce4ec 35%,
+    #f5ebe0 70%,
+    #ffe8d6 100%
+  );
+  min-height: 100dvh;
+  color: var(--color-plum);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.step-enter {
+  animation: fade-up 0.5s ease-out forwards;
+}
