@@ -321,7 +321,8 @@ export function TripWizard() {
         )}
       </div>
 
-      <footer className="mt-8 text-center text-xs text-plum/40">
+      <footer className="mt-8 text-center text-xs text-plum/40"> 
+      
       </footer>
     </main>
   );
